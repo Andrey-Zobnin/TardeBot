@@ -20,11 +20,14 @@ class Config:
         return {
             # API ключи
             'ALPHA_VANTAGE_API_KEY': os.getenv('ALPHA_VANTAGE_API_KEY', ''),
+            'ALFA_TOKEN': os.getenv('ALFA_TOKEN', ''),
+            'ALFA_ACCOUNT_ID': os.getenv('ALFA_ACCOUNT_ID', ''),
             
             # Настройки торговли
-            'DEFAULT_SYMBOL': os.getenv('DEFAULT_SYMBOL', 'AAPL'),
-            'INITIAL_BALANCE': float(os.getenv('INITIAL_BALANCE', '10000')),
+            'DEFAULT_SYMBOL': os.getenv('DEFAULT_SYMBOL', 'SBER'),  # Сбербанк для российского рынка
+            'INITIAL_BALANCE': float(os.getenv('INITIAL_BALANCE', '100000')),  # 100k рублей
             'MAX_POSITION_SIZE': float(os.getenv('MAX_POSITION_SIZE', '0.1')),
+            'USE_ALFA_BROKER': os.getenv('USE_ALFA_BROKER', 'true').lower() == 'true',
             
             # Настройки модели
             'PREDICTION_WINDOW': int(os.getenv('PREDICTION_WINDOW', '30')),
