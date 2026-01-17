@@ -8,6 +8,13 @@ seaborn==0.12.2
 # Для работы с API финансовых данных
 yfinance==0.2.18
 alpha-vantage==2.3.1
+requests==2.31.0
+websocket-client==1.6.1
+
+# Альфа-Инвестиции API
+grpcio==1.57.0
+grpcio-tools==1.57.0
+protobuf==4.24.0
 
 # Для машинного обучения
 tensorflow==2.13.0
